@@ -1,0 +1,62 @@
+# Weak passwords
+password
+123456
+123456789
+admin
+qwerty
+letmein
+welcome
+password123
+admin123
+root
+
+# Medium complexity
+Password1
+Admin2024
+Welcome123
+Test@123
+User@2025
+DevOps123!
+AppSec2026
+
+# Strong passwords
+T9$kLm#2pQ!z
+8fD!xP9@Lm2#Qa
+Zx!29Lm@Qp$4Rt
+P@ssW0rd!Secure#2026
+Ultra$tr0ng!Key#99
+
+# Secrets-like patterns (for SAST detection)
+db_password=SuperSecret123
+api_key=sk_test_51H8sd9f8sdf98sdf
+aws_secret=AKIAIOSFODNN7EXAMPLE
+token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+private_key=-----BEGIN RSA PRIVATE KEY-----
+
+# Hardcoded credentials
+username=admin
+password=Admin@123
+login=root
+pwd=toor
+
+# URL embedded credentials
+http://admin:admin123@localhost:8080
+https://user:Password1@api.test.com
+
+# Base64 encoded (common trick)
+cGFzc3dvcmQxMjM=
+U3VwZXJTZWNyZXQh
+
+# Variants for pattern detection
+pass=1234
+passwd=abcd1234
+pwd123=Test1234
+my_password=Dev@1234
+secret_key=MySecretKey2026
+
+# Edge cases
+"password": "123456"
+'pwd': 'admin'
+<password>root123</password>
+password = "P@ssw0rd!"
+const PASSWORD = "SuperSecret!";
